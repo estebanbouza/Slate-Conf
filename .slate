@@ -30,27 +30,30 @@ bind j:cmd;alt;ctrl ${righthalf}
 bind k:cmd;alt;ctrl ${full}
 bind l:cmd;alt;ctrl ${lefthalf}
 
+# Resizing
+bind left:cmd;alt;ctrl		resize -10%	0
+bind right:cmd;alt;ctrl 	resize +10% 	0
+bind up:cmd;alt;ctrl		resize 0    	-10%
+bind down:cmd;alt;ctrl		resize 0	+10%
+
+# Moving. Mandatory using '+' sign on 0s
+bind left:ctrl;alt 		nudge -10% +0
+bind right:ctrl;alt		nudge +10% +0
+bind up:ctrl;alt		nudge +0   -10%
+bind down:ctrl;alt		nudge +0   +10%
+
+
 
 # App bindings
 bind x:cmd;alt;ctrl focus 'Xcode'
 
 
 # three columns
-bind 5:shift;cmd	push left bar-resize:screenSizeX/3
-bind 6:shift;cmd	push left bar-resize:2*screenSizeX/3
-bind 0:shift;cmd	push right bar-resize:screenSizeX/3
-bind 9:shift;cmd	push right bar-resize:2*screenSizeX/3
-
-
-# halves
-bind left:cmd;alt	push left bar-resize:screenSizeX/2
-bind right:cmd;alt  push right bar-resize:screenSizeX/2
-bind up:cmd;alt     push up    bar-resize:screenSizeY/2
-bind down:cmd;alt   push down  bar-resize:screenSizeY/2
-
-# center
-
-bind 7:cmd;shift push top center
+# bind 5:shift;cmd	push left bar-resize:screenSizeX/3
+# bind 6:shift;cmd	push left bar-resize:2*screenSizeX/3
+# bind 0:shift;cmd	push right bar-resize:screenSizeX/3
+# bind 9:shift;cmd	push right bar-resize:2*screenSizeX/3
+# bind 7:cmd;shift push top center
 
 
 # Layouts
