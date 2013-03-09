@@ -31,16 +31,16 @@ bind k:cmd;alt;ctrl ${full}
 bind l:cmd;alt;ctrl ${lefthalf}
 
 # Resizing
-bind left:cmd;alt;ctrl		resize -10%	0
-bind right:cmd;alt;ctrl 	resize +10% 	0
-bind up:cmd;alt;ctrl		resize 0    	-10%
-bind down:cmd;alt;ctrl		resize 0	+10%
+bind left:alt;ctrl		resize -10%	0
+bind right:alt;ctrl 	resize +10% 	0
+bind up:alt;ctrl		resize 0    	-10%
+bind down:alt;ctrl		resize 0	+10%
 
 # Moving. Mandatory using '+' sign on 0s
-bind left:ctrl;alt 		nudge -10% +0
-bind right:ctrl;alt		nudge +10% +0
-bind up:ctrl;alt		nudge +0   -10%
-bind down:ctrl;alt		nudge +0   +10%
+bind left:ctrl;alt;cmd 		nudge -10% +0
+bind right:ctrl;alt;cmd		nudge +10% +0
+bind up:ctrl;alt;cmd		nudge +0   -10%
+bind down:ctrl;alt;cmd		nudge +0   +10%
 
 
 
