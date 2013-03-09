@@ -1,0 +1,81 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+# waiting for version 1.1
+# config switchType window
+config windowHintsIgnoreHiddenWindows false
+config windowHintsShowIcons true
+config windowHintsSpread true
+config windowHintsSpreadSearchWidth 200
+config windowHintsSpreadSearchHeight 300
+
+
+# Abstract positions
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias righthalf     move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias lefthalf      move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias leftmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
+alias leftless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
+alias rightmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
+alias rightless      move screenOriginX;screenOriginY   
+alias 
+
+# Esteban
+bind u:cmd;alt;ctrl push left bar-resize:screenSizeX/3
+
+bind j:cmd;alt;ctrl ${righthalf}
+bind k:cmd;alt;ctrl ${full}
+bind l:cmd;alt;ctrl ${lefthalf}
+
+
+# App bindings
+bind x:cmd;alt;ctrl focus 'Xcode'
+
+
+# three columns
+bind 5:shift;cmd	push left bar-resize:screenSizeX/3
+bind 6:shift;cmd	push left bar-resize:2*screenSizeX/3
+bind 0:shift;cmd	push right bar-resize:screenSizeX/3
+bind 9:shift;cmd	push right bar-resize:2*screenSizeX/3
+
+
+# halves
+bind left:cmd;alt	push left bar-resize:screenSizeX/2
+bind right:cmd;alt  push right bar-resize:screenSizeX/2
+bind up:cmd;alt     push up    bar-resize:screenSizeY/2
+bind down:cmd;alt   push down  bar-resize:screenSizeY/2
+
+# center
+
+bind 7:cmd;shift push top center
+
+
+# Layouts
+layout 1monitor 'Sublime Text 2':REPEAT ${lefthalf}
+layout 1monitor 'Chrome':REPEAT ${righthalf}
+layout 1monitor 'Mail':REPEAT ${righthalf}
+layout 1monitor 'Xcode':REPEAT ${full}
+layout 1monitor 'iTunes':REPEAT ${full}
+
+bind m:cmd;alt;ctrl layout 1monitor
+
+# grid
+bind g:alt;cmd;ctrl grid padding:5 0:8,6
+
+## app switcher
+
+# waiting for version 1.1
+# bind tab:alt switch
+bind tab:alt hint
+
+
+# itunes ( https://github.com∂/illusori/bash-itunes )
+# bind p:ctrl;alt;cmd shell '~/.bin/itunes pause'
+# bind o:ctrl;alt;cmd shell '~/.bin/itunes play'
+# bind up:ctrl;alt;cmd shell '~/.bin/itunes sysvol up'
+# bind down:ctrl;alt;cmd shell '~/.bin/itunes sysvol down'
+# bind left:ctrl;alt;cmd shell '~/.bin/itunes prev'
+# bind right:ctrl;alt;cmd shell '~/.bin/itunes next'
