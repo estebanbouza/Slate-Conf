@@ -61,7 +61,8 @@ bind down:ctrl;alt;cmd		nudge +0   +10%
 
 # App bindings
 bind x:cmd;alt;ctrl focus 'Xcode'
-
+bind t:cmd;alt;ctrl focus 'Terminal'
+bind s:cmd;alt;ctrl focus 'SourceTree'
 
 # Layouts
 layout 1monitor 'Sublime Text 2':REPEAT ${lefthalf}
@@ -81,4 +82,13 @@ bind m:cmd;alt;ctrl layout 1monitor
 # bind tab:alt switch
 # bind tab:alt hint
 
+# iTunes stuff
+bind p:ctrl;alt;cmd shell '/usr/local/bin/itunes pause'
+bind o:ctrl;alt;cmd shell '/usr/local/bin/itunes play'
+bind f12 shell '/usr/local/bin/itunes sysvol up'
+bind f11 shell '/usr/local/bin/itunes sysvol down'
+bind f10 shell '/usr/local/bin/itunes sysunmute'
+bind f9 shell '/usr/local/bin/itunes sysmute'
 
+bind left:ctrl;alt;cmd shell '`which itunes` prev'
+bind right:ctrl;alt;cmd shell '`which itunes` next'
